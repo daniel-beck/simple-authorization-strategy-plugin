@@ -1,0 +1,14 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson"
+         xmlns:f="/lib/form">
+    <f:entry field="anonymousReadAccess">
+        <f:checkbox title="${%Allow anonymous read access}" />
+    </f:entry>
+    <f:entry>
+        <!-- TODO hadHeader="false" once https://issues.jenkins.io/browse/JENKINS-71089 is fixed -->
+        <f:hetero-list name="adminIdentities"
+                       descriptors="${descriptor.adminIdentityDescriptors}"
+                       items="${instance.adminIdentities}"
+                       addCaption="${%Add Admin User or Group}"/>
+    </f:entry>
+</j:jelly>

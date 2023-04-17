@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Provides a simple authorization strategy: Specified users are admins, everyone else just has basic read access.
+</div>
